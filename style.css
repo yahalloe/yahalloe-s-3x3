@@ -1,0 +1,105 @@
+h2 {
+  margin-top: 50px;
+  margin-bottom: 1px;
+  font-size: 20px;
+  border: 0;
+  text-align: center;
+  font-weight: 1;
+}
+#title {
+  display: flex;
+  align-self: normal;
+  position: relative;
+  color: inherit; /* Set the color to inherit from its parent element */
+  text-decoration: none; /* Remove underline */
+}
+#title:before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 3px;
+  width: 0;
+  margin-left: 100px;
+  bottom: 20px;
+  transition: 0.3s ease;
+  border-radius: 2px;
+}
+#title:hover:before {
+  width: 1300px;
+}
+button {
+  margin-top: 30px;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  padding: 10px;
+  background-color: #faf3eb;
+  color: black;
+  margin: 0 auto;
+  display: block;
+}
+#contacts {
+  color: black;
+  text-decoration: none; /* Remove underline */
+  align-items: center; /* Center elements horizontally */
+  margin-top: 30px;
+  margin-bottom: 150px;
+}
+h1 {
+  margin-top: 5px;
+  margin-left: auto; /* Set left margin to auto */
+  margin-right: auto;
+  margin-bottom: 2px;
+  font-size: 140px;
+  border: 0;
+  text-align: center;
+  font-weight: 1;
+}
+body {
+  margin: auto;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  background-color: #faf3eb;
+}
+main {
+  margin: 0 auto;
+  background-color: #faf3eb;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center elements horizontally */
+  text-align: center;
+}
+.grid-container {
+  margin-top: 200px;
+  max-width: 750px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 9 equal-width columns */
+  grid-auto-rows: 1fr; /* Equal height rows */
+  gap: 10px; /* Adjust the gap between images as needed */
+}
+.grid-container img {
+  max-width: 100%; /* Ensure the images fit within their grid cells */
+  height: auto; /* Maintain image aspect ratio */
+}
+.explanation {
+  text-align: center;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 300px;
+}
+.linkingPics {
+  margin-top: 70px;
+  max-width: 750px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 9 equal-width columns */
+  grid-auto-rows: 1fr; /* Equal height rows */
+  gap: 10px;
+}
+.linkingPics img {
+  max-width: 100%; /* Ensure the images fit within their grid cells */
+  height: auto;
+}
