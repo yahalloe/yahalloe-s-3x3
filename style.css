@@ -1,14 +1,13 @@
 h2 {
   margin-top: 50px;
   margin-bottom: 1px;
-  font-size: 20px;
+  font-size: 1rem;
   border: 0;
   text-align: center;
   font-weight: 1;
 }
 #title {
-  display: flex;
-  align-self: normal;
+  flex-direction: column;
   position: relative;
   color: inherit; /* Set the color to inherit from its parent element */
   text-decoration: none; /* Remove underline */
@@ -50,9 +49,9 @@ h1 {
   margin-left: auto; /* Set left margin to auto */
   margin-right: auto;
   margin-bottom: 2px;
-  font-size: 140px;
-  border: 0;
+  font-size: 4rem;
   text-align: center;
+  border: 0;
   font-weight: 1;
 }
 body {
@@ -70,36 +69,72 @@ main {
   text-align: center;
 }
 .grid-container {
-  margin-top: 200px;
+  margin-top: 4rem;
   max-width: 750px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Create 9 equal-width columns */
-  grid-auto-rows: 1fr; /* Equal height rows */
-  gap: 10px; /* Adjust the gap between images as needed */
+  grid-auto-rows: .2fr; /* Equal height rows */
+  gap: .9rem; /* Adjust the gap between images as needed */
 }
 .grid-container img {
   max-width: 100%; /* Ensure the images fit within their grid cells */
   height: auto; /* Maintain image aspect ratio */
 }
-.explanation {
+p {
   text-align: center;
+  font-size: .8rem;
 }
 footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 300px;
+  margin-top: 5rem;
 }
 .linkingPics {
-  margin-top: 70px;
+  margin-top: 1rem;
   max-width: 750px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Create 9 equal-width columns */
-  grid-auto-rows: 1fr; /* Equal height rows */
+  grid-auto-rows: .2fr; /* Equal height rows */
   gap: 10px;
 }
 .linkingPics img {
   max-width: 100%; /* Ensure the images fit within their grid cells */
   height: auto;
+}
+
+@media (min-width: 600px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  .grid-container {
+    margin-top: 10rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  footer {
+    margin-top: 15rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 10rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }.grid-container {
+    margin-top: 15rem;
+  }
+  p {
+    font-size: 1.25rem;
+  }
+  footer {
+    margin-top: 19rem;
+  }
 }
