@@ -24,7 +24,7 @@ h2 {
   border-radius: 2px;
 }
 #title:hover:before {
-  width: 1300px;
+  width: 0;
 }
 button {
   margin-top: 30px;
@@ -70,7 +70,7 @@ main {
 }
 .grid-container {
   margin-top: 4rem;
-  max-width: 750px;
+  max-width: 47%;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Create 9 equal-width columns */
   grid-auto-rows: .2fr; /* Equal height rows */
@@ -113,6 +113,7 @@ footer {
   }
   .grid-container {
     margin-top: 10rem;
+    max-width: 57%;
   }
   p {
     font-size: 1rem;
@@ -131,6 +132,7 @@ footer {
   }
   .grid-container {
     margin-top: 15rem;
+    max-width: 57%;
   }
   p {
     font-size: 1.25rem;
