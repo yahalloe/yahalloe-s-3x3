@@ -68,13 +68,20 @@ main {
   align-items: center; /* Center elements horizontally */
   text-align: center;
 }
+.explanation-container {
+  color: inherit; /* Set the color to inherit from its parent element */
+  text-decoration: none; /* Remove underline */
+  margin-top: 4rem;
+  max-width: 100%; /* Ensure the images fit within their grid cells */
+  height: auto; /* Maintain image aspect ratio */
+}
 .grid-container {
   margin-top: 4rem;
   max-width: 47%;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Create 9 equal-width columns */
-  grid-auto-rows: .2fr; /* Equal height rows */
-  gap: .9rem; /* Adjust the gap between images as needed */
+  grid-auto-rows: 0.2fr; /* Equal height rows */
+  gap: 0.9rem; /* Adjust the gap between images as needed */
 }
 .grid-container img {
   max-width: 100%; /* Ensure the images fit within their grid cells */
@@ -82,7 +89,7 @@ main {
 }
 p {
   text-align: center;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 footer {
   display: flex;
@@ -96,7 +103,7 @@ footer {
   max-width: 750px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Create 9 equal-width columns */
-  grid-auto-rows: .2fr; /* Equal height rows */
+  grid-auto-rows: 0.2fr; /* Equal height rows */
   gap: 10px;
 }
 .linkingPics img {
