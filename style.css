@@ -111,6 +111,15 @@ footer {
   height: auto;
 }
 
+h3 {
+  margin-top: 9rem;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border: 0;
+  text-align: center;
+  font-weight: 1;
+}
+
 @media (min-width: 600px) {
   h1 {
     font-size: 5rem;
