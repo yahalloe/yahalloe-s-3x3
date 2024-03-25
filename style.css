@@ -165,6 +165,10 @@ h3 {
   h2 {
     font-size: 1rem;
   }
+  .explanation-container img {
+    max-width: 90%; /* Ensure the images fit within their container */
+    height: auto; /* Maintain image aspect ratio */
+  }
   .grid-container {
     margin-top: 5rem;
     max-width: 90%;
@@ -174,5 +178,8 @@ h3 {
   }
   footer {
     margin-top: 10rem;
+  }
+  .linkingPics {
+    margin: 2em;
   }
 }
