@@ -157,3 +157,22 @@ h3 {
     margin-top: 19rem;
   }
 }
+
+@media (max-width: 599px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .grid-container {
+    margin-top: 5rem;
+    max-width: 90%;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  footer {
+    margin-top: 10rem;
+  }
+}
