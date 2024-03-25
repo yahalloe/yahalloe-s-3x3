@@ -87,9 +87,12 @@ main {
   max-width: 100%; /* Ensure the images fit within their grid cells */
   height: auto; /* Maintain image aspect ratio */
 }
+.explanation {
+  margin-top: 1rem;
+}
 p {
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 3rem;
 }
 footer {
   display: flex;
@@ -157,6 +160,7 @@ h3 {
     margin-top: 19rem;
   }
 }
+
 /* mobile look*/
 @media (max-width: 599px) {
   h1 {
@@ -175,6 +179,7 @@ h3 {
   }
   p {
     font-size: 0.8rem;
+    margin: 1em;
   }
   footer {
     margin-top: 10rem;
