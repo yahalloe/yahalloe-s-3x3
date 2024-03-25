@@ -157,7 +157,7 @@ h3 {
     margin-top: 19rem;
   }
 }
-
+/* mobile look*/
 @media (max-width: 599px) {
   h1 {
     font-size: 3rem;
