@@ -176,6 +176,7 @@ h3 {
   .grid-container {
     margin-top: 5rem;
     max-width: 90%;
+    gap: 0.3rem
   }
   p {
     font-size: 0.8rem;
