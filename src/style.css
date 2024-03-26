@@ -164,7 +164,7 @@ h3 {
 }
 
 /* mobile look*/
-@media (max-width: 599px) {
+@media (max-width: 767px) {
   h1 {
     font-size: 3rem;
   }
