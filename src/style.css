@@ -123,6 +123,7 @@ h3 {
   border: 0;
   text-align: center;
   font-weight: 1;
+  color: rgb(186, 174, 157);
 }
 
 @media (min-width: 600px) {
