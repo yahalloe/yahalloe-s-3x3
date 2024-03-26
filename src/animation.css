@@ -1,8 +1,8 @@
 .grid-container img:hover {
-    transform: scale(1.05); /* Increase the size of the image on hover */
-    transition: transform 0.4s ease; /* Add a smooth transition effect */
-  }
+  transform: scale(1.05); /* Increase the size of the image on hover */
+  transition: transform 0.4s ease; /* Add a smooth transition effect */
+}
 .linkingPics img:hover {
-    transform: scale(1.05); /* Increase the size of the image on hover */
-    transition: transform 0.3s ease; /* Add a smooth transition effect */
-  }
+  transform: scale(1.05); /* Increase the size of the image on hover */
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
