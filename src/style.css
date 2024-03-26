@@ -28,21 +28,20 @@ h2 {
   width: 0;
 }
 button {
-  margin-top: 30px;
+  margin-top: 1em;
   font-size: 2rem;
   border: none;
   outline: none;
   padding: 10px;
   background-color: #faf3eb;
-  color: black;
+  color: rgb(186, 174, 157);
   margin: 0 auto;
   display: block;
 }
 #contacts {
-  color: black;
   text-decoration: none; /* Remove underline */
   align-items: center; /* Center elements horizontally */
-  margin-top: 30px;
+  margin-top: 1em;
   margin-bottom: 1em;
 }
 h1 {
@@ -114,6 +113,15 @@ footer {
 .linkingPics img {
   max-width: 100%; /* Ensure the images fit within their grid cells */
   height: auto;
+}
+
+aside {
+  margin-top: 1rem;
+  display: block;
+  flex-direction: row;
+  align-items: center;
+  text-align: end;
+  width: 50em;
 }
 
 h3 {
