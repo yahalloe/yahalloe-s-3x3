@@ -87,6 +87,7 @@ main {
 .grid-container img {
   max-width: 100%; /* Ensure the images fit within their grid cells */
   height: auto; /* Maintain image aspect ratio */
+  width: 100%; /* Added to ensure images stay within the grid container */
 }
 .explanation {
   margin-top: 1rem;
@@ -189,4 +190,7 @@ h3 {
   .linkingPics {
     margin: 2em;
   }
+}
+.grid-container img {
+
 }
