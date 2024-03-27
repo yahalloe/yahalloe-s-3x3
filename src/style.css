@@ -32,8 +32,8 @@ button {
   border: none;
   outline: none;
   padding: 10px;
-  background-color: #faf3eb;
-  color: rgb(186, 174, 157);
+  background-color: #000000;
+  color: rgb(255, 255, 255);
   margin: 0 auto;
   display: block;
 }
@@ -121,17 +121,29 @@ h3 {
   border: 0;
   text-align: center;
   font-weight: 1;
-  color: rgb(186, 174, 157);
 }
 
 aside {
+  background-color: black;
   margin-top: 10rem;
   display: flex;
-  flex-direction: row; /* Change flex-direction to row */
+  flex-direction: column; /* Change flex-direction to row */
   align-items: center;
-  justify-content: space-between; /* Add justify-content property */
-  text-align: end;
-  width: 65%;
+  justify-content: center; /* Add justify-content property */
+  text-align: justify;
+  width: 100%;
+}
+
+.contact-us {
+  color: rgb(209, 207, 207);
+}
+
+.about-us {
+  color: rgb(209, 207, 207);
+}
+
+.copyrights {
+  color: white;
 }
 
 @media (min-width: 600px) {
@@ -190,7 +202,7 @@ aside {
     gap: 0.3rem;
   }
   p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin: 1em;
   }
   footer {
@@ -201,6 +213,6 @@ aside {
   }
   aside {
     margin-top: 10rem;
-    width: 90%;
+    width: 100%;
   }
 }
