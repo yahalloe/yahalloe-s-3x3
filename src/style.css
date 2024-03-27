@@ -115,17 +115,17 @@ footer {
   height: auto;
 }
 
-aside {
+/* aside {
   margin-top: 1rem;
   display: block;
   flex-direction: row;
   align-items: center;
   text-align: end;
   width: 50em;
-}
+} */
 
 h3 {
-  margin-top: 9rem;
+  margin-top: 2em;
   margin-bottom: 10px;
   font-size: 1rem;
   border: 0;
@@ -133,6 +133,16 @@ h3 {
   font-weight: 1;
   color: rgb(186, 174, 157);
 }
+aside {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: row; /* Change flex-direction to row */
+  align-items: center;
+  justify-content: space-between; /* Add justify-content property */
+  text-align: end;
+  width: 65%;
+}
+
 
 @media (min-width: 600px) {
   h1 {
@@ -198,5 +208,9 @@ h3 {
   }
   .linkingPics {
     margin: 2em;
+  }
+  aside {
+    margin-top: 10rem;
+    width: 90%;
   }
 }
