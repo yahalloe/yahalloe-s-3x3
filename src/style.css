@@ -204,6 +204,11 @@ aside {
     max-width: 90%;
     gap: 0.3rem;
   }
+  .explanation {
+    margin-top: 50px; /* Set the top margin to 20px */
+    margin-bottom: 20px; /* Optionally set the bottom margin as well */
+  }
+  
   p {
     font-size: 1rem;
     margin: 1em;
