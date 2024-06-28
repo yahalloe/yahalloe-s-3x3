@@ -1,4 +1,9 @@
+header {
+padding-top: 1rem;
+background-color: #222;
+}
 h2 {
+  color: #d7d7d7;
   margin-top: 2em;
   margin-bottom: 1px;
   font-size: 1rem;
@@ -44,6 +49,7 @@ button {
   margin-bottom: 1em;
 }
 h1 {
+  color: #d7d7d7;
   margin-top: 5px;
   margin-left: auto; /* Set left margin to auto */
   margin-right: auto;
@@ -57,11 +63,11 @@ body {
   margin: auto;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
-  background-color: #faf3eb;
+  background-color: #333;
 }
 main {
   margin: 0 auto;
-  background-color: #faf3eb;
+  background-color: #333;
   display: flex;
   flex-direction: column; /* Stack elements vertically */
   align-items: center; /* Center elements horizontally */
@@ -88,14 +94,32 @@ main {
   width: 100%; /* Added to ensure images stay within the grid container */
 }
 .explanation {
+  color: #d7d7d7;
   margin-top: 1rem;
 }
 p {
+  color: #d7d7d7;
   text-align: center;
   font-size: 3rem;
   margin-top: 5em;
   margin-right: 10em;
   margin-left: 10em;
+  padding-bottom: 2rem;
+}
+.aboutMe-container {
+  background-color: #222;
+}
+
+.aboutMe {
+  color: #d7d7d7;
+  line-height: 1.5;
+  text-align: right;
+  margin-left: 29em;
+  margin-right: 32em;
+  margin-top: 10em;
+  margin-bottom: 1em;
+  font-size: 1.3rem;
+  border: 0;
 }
 footer {
   display: flex;
@@ -124,10 +148,11 @@ h3 {
   border: 0;
   text-align: center;
   font-weight: 1;
+  color: #555555;
 }
 
 aside {
-  background-color: black;
+  background-color: #111;
   margin-top: 10rem;
   display: flex;
   flex-direction: column; /* Change flex-direction to row */
@@ -208,7 +233,7 @@ aside {
     margin-top: 50px; /* Set the top margin to 20px */
     margin-bottom: 20px; /* Optionally set the bottom margin as well */
   }
-  
+
   p {
     font-size: 1rem;
     margin: 1em;
