@@ -1,3 +1,8 @@
 *.Identifier
 new_new_server
 new_new_server.pub
+main.go
+server.js
+src/bun.lockb
+src/node_modules/
+src/package.json
