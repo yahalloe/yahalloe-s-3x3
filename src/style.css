@@ -1,7 +1,8 @@
 header {
-padding-top: 1rem;
-background-color: #222;
+  padding-top: 1rem;
+  background-color: #222;
 }
+
 h2 {
   color: #d7d7d7;
   margin-top: 2em;
@@ -11,12 +12,14 @@ h2 {
   text-align: center;
   font-weight: 1;
 }
+
 #title {
   flex-direction: column;
   position: relative;
-  color: inherit; /* Set the color to inherit from its parent element */
-  text-decoration: none; /* Remove underline */
+  color: inherit;
+  text-decoration: none;
 }
+
 #title:before {
   content: "";
   position: absolute;
@@ -28,9 +31,11 @@ h2 {
   transition: 0.3s ease;
   border-radius: 2px;
 }
+
 #title:hover:before {
   width: 0;
 }
+
 button {
   margin-top: 1em;
   font-size: 2rem;
@@ -42,61 +47,70 @@ button {
   margin: 0 auto;
   display: block;
 }
+
 #contacts {
-  text-decoration: none; /* Remove underline */
-  align-items: center; /* Center elements horizontally */
+  text-decoration: none;
+  align-items: center;
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
 h1 {
   color: #d7d7d7;
   margin-top: 5px;
-  margin-left: auto; /* Set left margin to auto */
+  margin-left: auto;
   margin-right: auto;
   margin-bottom: 2px;
   font-size: 4rem;
   text-align: center;
   border: 0;
-  font-weight: 1;
+  font-weight: 400;
 }
+
 body {
   margin: auto;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 400;
   background-color: #333;
 }
+
 main {
   margin: 0 auto;
   background-color: #333;
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center; /* Center elements horizontally */
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
+
 .explanation-container {
-  color: inherit; /* Set the color to inherit from its parent element */
-  text-decoration: none; /* Remove underline */
+  color: inherit;
+  text-decoration: none;
   margin-top: 4rem;
-  max-width: 100%; /* Ensure the images fit within their grid cells */
-  height: auto; /* Maintain image aspect ratio */
+  max-width: 100%;
+  height: auto;
 }
+
 .grid-container {
   margin-top: 4rem;
   max-width: 47%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Create 9 equal-width columns */
-  grid-auto-rows: 0.2fr; /* Equal height rows */
-  gap: 0.9rem; /* Adjust the gap between images as needed */
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 0.2fr;
+  gap: 0.9rem;
 }
+
 .grid-container img {
-  max-width: 100%; /* Ensure the images fit within their grid cells */
-  height: auto; /* Maintain image aspect ratio */
-  width: 100%; /* Added to ensure images stay within the grid container */
+  max-width: 100%;
+  height: auto;
+  width: 100%;
 }
+
 .explanation {
   color: #d7d7d7;
   margin-top: 1rem;
 }
+
 p {
   color: #d7d7d7;
   text-align: center;
@@ -106,6 +120,7 @@ p {
   margin-left: 10em;
   padding-bottom: 2rem;
 }
+
 .aboutMe-container {
   background-color: #222;
 }
@@ -121,23 +136,25 @@ p {
   font-size: 1.3rem;
   border: 0;
 }
+
 footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  /* margin-top: 5em; */
 }
+
 .linkingPics {
   margin-top: 1rem;
-  max-width: 750px;
+  max-width: 40%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Create 9 equal-width columns */
-  grid-auto-rows: 0.2fr; /* Equal height rows */
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
   gap: 10px;
 }
+
 .linkingPics img {
-  max-width: 100%; /* Ensure the images fit within their grid cells */
+  max-width: 100%;
   height: auto;
 }
 
@@ -155,9 +172,9 @@ aside {
   background-color: #111;
   margin-top: 10rem;
   display: flex;
-  flex-direction: column; /* Change flex-direction to row */
+  flex-direction: column;
   align-items: center;
-  justify-content: center; /* Add justify-content property */
+  justify-content: center;
   text-align: justify;
   width: 100%;
 }
@@ -178,16 +195,20 @@ aside {
   h1 {
     font-size: 5rem;
   }
+
   h2 {
     font-size: 1.25rem;
   }
+
   .grid-container {
     margin-top: 10rem;
     max-width: 57%;
   }
+
   p {
     font-size: 1rem;
   }
+
   footer {
     margin-top: 15rem;
   }
@@ -197,53 +218,74 @@ aside {
   h1 {
     font-size: 10rem;
   }
+
   h2 {
     font-size: 1.5rem;
   }
+
   .grid-container {
     margin-top: 15rem;
     max-width: 57%;
   }
+
   p {
     font-size: 1.25rem;
   }
+
   footer {
     margin-top: 19rem;
   }
 }
 
-/* mobile look*/
+/* mobile look */
 @media (max-width: 767px) {
   h1 {
     font-size: 3rem;
   }
+
   h2 {
     font-size: 1rem;
   }
+
   .explanation-container img {
-    max-width: 90%; /* Ensure the images fit within their container */
-    height: auto; /* Maintain image aspect ratio */
+    max-width: 90%;
+    height: auto;
   }
+
   .grid-container {
     margin-top: 5rem;
     max-width: 90%;
     gap: 0.3rem;
+    grid-template-columns: 1fr;
   }
+
   .explanation {
-    margin-top: 50px; /* Set the top margin to 20px */
-    margin-bottom: 20px; /* Optionally set the bottom margin as well */
+    margin-top: 50px;
+    margin-bottom: 20px;
   }
 
   p {
     font-size: 1rem;
     margin: 1em;
   }
+
   footer {
     margin-top: 10rem;
   }
+
   .linkingPics {
     margin: 2em;
+    max-width: 60%;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: 10px;
   }
+
+  .linkingPics img {
+    max-width: 100%;
+    height: auto;
+  }
+
   aside {
     margin-top: 10rem;
     width: 100%;
