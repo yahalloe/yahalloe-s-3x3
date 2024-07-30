@@ -42,7 +42,7 @@ button {
   border: none;
   outline: none;
   padding: 10px;
-  background-color: #000000;
+  background-color: #111111;
   color: rgb(255, 255, 255);
   margin: 0 auto;
   display: block;
@@ -165,8 +165,17 @@ h3 {
   font-size: 1rem;
   border: 0;
   text-align: center;
-  font-weight: 1;
+  font-weight: 10;
   color: #555555;
+  text-decoration: none;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Inherits the color from the parent element, or specify a color if needed */
 }
 
 aside {
