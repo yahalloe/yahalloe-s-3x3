@@ -10,7 +10,7 @@ h2 {
   font-size: 1rem;
   border: 0;
   text-align: center;
-  font-weight: 1;
+  font-weight: 400;
 }
 
 #title {
@@ -109,12 +109,13 @@ main {
 .explanation {
   color: #d7d7d7;
   margin-top: 1rem;
+  font-weight: 400;
 }
 
 p {
   color: #d7d7d7;
   text-align: center;
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-top: 5em;
   margin-right: 10em;
   margin-left: 10em;
