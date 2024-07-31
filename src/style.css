@@ -1,3 +1,7 @@
+html {
+  margin: 0;
+}
+
 header {
   padding-top: .5em;
   padding-bottom: .5rem;
@@ -75,6 +79,7 @@ body {
 }
 
 main {
+  max-width: 100%;
   margin: 0 auto;
   background-color: #333;
   display: flex;
@@ -92,7 +97,7 @@ main {
 }
 
 .grid-container {
-  margin-top: 4rem;
+  margin-top: 15rem;
   max-width: 47%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -117,23 +122,29 @@ p {
   text-align: center;
   font-size: 3.5rem;
   margin-top: 5em;
-  margin-right: 10em;
-  margin-left: 10em;
+  margin-right: 9em;
+  margin-left: 9em;
   padding-bottom: 2rem;
 }
 
 .aboutMe-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 25em;
+  max-width: 100%;
   background-color: #222;
+  text-align: right;
+  align-items: center; /* Center content horizontally */
+  justify-content: center; /* Center content vertically */
 }
 
 .aboutMe {
+  width: 100%;
   color: #d7d7d7;
   line-height: 1.5;
-  text-align: right;
-  margin-left: 29em;
-  margin-right: 32em;
-  margin-top: 10em;
-  margin-bottom: 1em;
+  text-align: center; /* Center text */
+  padding: 0 3em; /* Adjust padding */
   font-size: 1.3rem;
   border: 0;
 }
@@ -143,6 +154,7 @@ footer {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-top: 0;
 }
 
 .linkingPics {
@@ -190,6 +202,7 @@ aside {
 }
 
 .contact-us {
+  cursor: pointer;
   margin-top: .5em;
   color: rgb(209, 207, 207);
 }
@@ -251,7 +264,9 @@ aside {
 /* mobile look */
 @media (max-width: 767px) {
   h1 {
-    font-size: 3rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 1.1rem;
   }
 
   h2 {
@@ -273,6 +288,21 @@ aside {
   .explanation {
     margin-top: 50px;
     margin-bottom: 20px;
+  }
+
+  .aboutMe-container {
+    padding: 0 0 0 0;
+  }
+
+  .aboutMe {
+    padding: 0 1em;
+    padding-top: 10rem;
+    line-height: 1.8;
+    width: 100%;
+    font-size: 1em;
+    margin: 0;
+    text-align: left; /* Center text on mobile */
+    box-sizing: border-box;
   }
 
   p {
