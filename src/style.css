@@ -3,8 +3,8 @@ html {
 }
 
 header {
-  padding-top: .5em;
-  padding-bottom: .5rem;
+  padding-top: 0.5em;
+  padding-bottom: 0.5rem;
   background-color: #222;
 }
 
@@ -95,6 +95,9 @@ main {
   max-width: 100%;
   height: auto;
 }
+.not-found-container {
+  margin-top: 1rem;
+}
 
 .grid-container {
   margin-top: 15rem;
@@ -172,8 +175,8 @@ footer {
 }
 
 h3 {
-  margin-top: .3em;
-  margin-bottom: .3em;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
   font-size: 1rem;
   border: 0;
   text-align: center;
@@ -203,7 +206,7 @@ aside {
 
 .contact-us {
   cursor: pointer;
-  margin-top: .5em;
+  margin-top: 0.5em;
   color: rgb(209, 207, 207);
 }
 
