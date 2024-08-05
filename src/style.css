@@ -264,7 +264,6 @@ aside {
 /* mobile look */
 @media (max-width: 767px) {
   h1 {
-    width: 95%;
     margin: 0 auto;
     box-sizing: border-box;
     padding-top: 1.1rem;
