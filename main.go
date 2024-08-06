@@ -1,27 +1,45 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 
-	"github.com/fatih/color"
+	"golang.org/x/crypto/acme/autocert"
 )
 
 func main() {
-	errMsg := color.New(color.FgRed).SprintFunc()
-	fs := http.FileServer(http.Dir("./src"))
-	heartFs := http.FileServer(http.Dir("./src/heart"))
+	// Define the domains you want to serve
+	domains := []string{"yahallo.me", "www.yahallo.me"}
 
-	// Terminal hyperlink support
-	url := "http://localhost:8080/"
-	fmt.Printf("Server %s at %s\n", color.GreenString("starting"), color.BlueString("\033]8;;%s\033\\%s\033]8;;\033\\", url, url))
+	// Configure the autocert manager
+	m := &autocert.Manager{
+		Cache:      autocert.DirCache("/var/www/.cache"), // specify a directory to store the certificates
+		Prompt:     autocert.AcceptTOS,
+		HostPolicy: autocert.HostWhitelist(domains...),
+	}
 
-	http.Handle("/", http.StripPrefix("/", fs))           // Serve the main file server at the root
-	http.Handle("/heart/", http.StripPrefix("/heart", heartFs)) // Serve the heart file server at /heart/
+	// Create the server with the autocert manager
+	srv := &http.Server{
+		Addr: ":443",
+		Handler: http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			// Handle requests here
+			if r.URL.Path == "/heart" {
+				http.ServeFile(w, r, "./src/heart")
+				return
+			}
+			http.FileServer(http.Dir("./src")).ServeHTTP(w, r)
+		}),
+		TLSConfig: m.TLSConfig(),
+	}
 
-	err := http.ListenAndServe(":8080", nil) // Use nil to default to DefaultServeMux
+	// Redirect HTTP to HTTPS
+	go func() {
+		log.Fatal(http.ListenAndServe(":80", m.HTTPHandler(nil)))
+	}()
+
+	log.Println("Server starting on :443")
+	err := srv.ListenAndServeTLS("", "") // Using autocert, no need to specify cert paths
 	if err != nil {
-		log.Fatal(errMsg("ListenAndServe: "), err)
+		log.Fatal("ListenAndServeTLS: ", err)
 	}
 }
