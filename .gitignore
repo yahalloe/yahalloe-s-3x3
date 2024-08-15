@@ -5,3 +5,4 @@ server.js
 src/bun.lockb
 src/node_modules/
 src/package.json
+rust-server
