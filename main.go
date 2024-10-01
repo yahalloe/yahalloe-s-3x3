@@ -27,6 +27,10 @@ func main() {
 				http.ServeFile(w, r, "./src/heart")
 				return
 			}
+			if r.URL.Path == "/docs" {
+				http.ServeFile(w, r, "./src/docs/")
+				return
+			}
 			http.FileServer(http.Dir("./src")).ServeHTTP(w, r)
 		}),
 		TLSConfig: m.TLSConfig(),

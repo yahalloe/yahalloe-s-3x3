@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>docs</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/jpg"
+      href="https://www.seguetech.com/wp-content/uploads/2013/09/segue-blog-whyis-documentation-extremely-important-for-developers.png"
+    />
+  </head>
+  <body>
+    <div class="title"><h1>Documentation for Truth Table Gen</h1></div>
+    <div class="container">
+      <h2>⚡ Requirements</h2>
+      <ul>
+        <li>
+          <a href="https://www.python.org/downloads/" target="_blank"
+            >Python 3. Duh.</a
+          >.
+        </li>
+      </ul>
+
+      <h2>🚀 How to Use</h2>
+      <p>
+        Call <code>python</code> then the <code>filename.py</code> then the
+        <code><</code> operator to redirect the contents of the
+        <code>.txt</code> file in the python program.
+      </p>
+      <p>For example:</p>
+      <pre><code>python noEval.py < input.txt</code></pre>
+      <h2>⚠️ WARNING!</h2>
+      <p>
+        this method doesn't works on powershell. On linux shells and cmd, no
+        problemo.
+      </p>
+
+      <h2>📃 Input Syntax</h2>
+      <p>
+        You shall obey the following rules in using the program or else it will
+        indefinitely refer you to the docs, unless of course you Ctrl + C.
+      </p>
+      <ul>
+        <li>
+          <strong>Variable Names:</strong>
+          <ul>
+            <li>
+              The logical variables are represented by single uppercase letters,
+              specifically <code>P</code> and <code>Q</code>.
+            </li>
+            <li>
+              You can only use <code>P</code> and <code>Q</code> as variable
+              names in the current implementation.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Logical Operators:</strong>
+          <ul>
+            <li>
+              The following logical operators are supported:
+              <ul>
+                <li>
+                  <code>and</code>: Represents the logical conjunction (AND).
+                </li>
+                <li>
+                  <code>or</code>: Represents the logical disjunction (OR).
+                </li>
+                <li>
+                  <code>not</code>: Represents the logical negation (NOT).
+                </li>
+                <li>
+                  <code>-></code>: <strong>WARNING!</strong> If you want to use
+                  this symbol, you need to translate it with
+                  <code>not</code> and <code>or</code> i.e.
+                  <code>P -> Q == not P or Q</code>.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Expression Format:</strong>
+          <ul>
+            <li>
+              Users can construct logical expressions using the variables and
+              operators listed above.
+            </li>
+            <li>
+              Expressions must be written in a way that respects the standard
+              logical syntax:
+              <ul>
+                <li>
+                  Each logical operator should be separated from operands
+                  (variables and boolean values) by spaces.
+                </li>
+                <li>
+                  For example:
+                  <ul>
+                    <li>
+                      Valid expressions:
+                      <ul>
+                        <li><code>P and Q</code></li>
+                        <li><code>P or not Q</code></li>
+                        <li>
+                          <code>P and Q and not P</code>
+                        </li>
+                        <li><code>not P or Q</code></li>
+                      </ul>
+                    </li>
+                    <li>
+                      Invalid expressions (will cause errors):
+                      <ul>
+                        <li><code>PandQ</code> (missing spaces)</li>
+                        <li><code>P&Q</code> (using incorrect operator)</li>
+                        <li>
+                          <code>notP orQ</code>
+                          (missing spaces)
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Examples:</strong>
+          <ul>
+            <li>
+              Here are some example expressions that users might enter:
+              <ul>
+                <li>
+                  <code>P and Q</code>: Evaluates to <code>True</code> if both
+                  <code>P</code> and <code>Q</code> are <code>True</code>.
+                </li>
+                <li>
+                  <code>not P</code>: Evaluates to <code>True</code> if
+                  <code>P</code> is <code>False</code>.
+                </li>
+                <li>
+                  <code>P or Q</code>: Evaluates to <code>True</code> if at
+                  least one of <code>P</code> or <code>Q</code> is
+                  <code>True</code>.
+                </li>
+                <li>
+                  <code>P and Q and not Q</code>: Evaluates to
+                  <code>True</code> only when <code>P</code> is
+                  <code>True</code> and <code>Q</code> is <code>False</code>.
+                </li>
+                <li>
+                  <code>(P or Q) and not P</code>: Evaluates to
+                  <code>True</code> if <code>Q</code> is <code>True</code> and
+                  <code>P</code> is <code>False</code>.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>🤔 Purpose</h2>
+      <p>
+        The purpose of this program is to generate and print a truth table for
+        logical expressions with two variables, <code>P</code> and
+        <code>Q</code>, using basic logical operations (<code>and</code>,
+        <code>or</code>, and <code>not</code>). The program evaluates user input
+        expressions and generates the corresponding truth table.
+      </p>
+
+      <h2>1. <strong>Imports</strong></h2>
+      <pre><code>import itertools</code></pre>
+      <p>
+        The <code>itertools</code> module is imported to generate all possible
+        combinations of truth values (<code>True</code> and <code>False</code>)
+        for the variables <code>P</code> and <code>Q</code>. Specifically, we
+        use the <code>itertools.product()</code> function, which creates
+        Cartesian products.
+      </p>
+      <pre><code>import sys</code></pre>
+      <p>
+        The <code>sys</code> module is imported to read the expressions via a
+        file.
+      </p>
+
+      <h2>2. <strong>Logical Operation Functions</strong></h2>
+      <pre><code>def logical_and(p, q):
+    return p and q
+
+def logical_or(p, q):
+    return p or q
+
+def logical_not(p):
+    return not p
+</code></pre>
+      <p>These are custom functions that simulate basic logical operations:</p>
+      <ul>
+        <li>
+          <code>logical_and(p, q)</code>: Returns <code>True</code> if both
+          <code>p</code> and <code>q</code> are <code>True</code>, otherwise
+          returns <code>False</code>.
+        </li>
+        <li>
+          <code>logical_or(p, q)</code>: Returns <code>True</code> if either
+          <code>p</code> or <code>q</code> is <code>True</code>, otherwise
+          returns <code>False</code>.
+        </li>
+        <li>
+          <code>logical_not(p)</code>: Returns the negation of
+          <code>p</code> (<code>True</code> becomes <code>False</code>, and
+          <code>False</code> becomes <code>True</code>).
+        </li>
+      </ul>
+      <p>
+        These functions are used in place of Python’s built-in logical operators
+        to ensure the logic of the truth table is computed manually.
+      </p>
+
+      <h2>3. <strong>Expression Evaluation</strong></h2>
+      <pre><code>def evaluate_expression(variables, combination, expression):
+</code></pre>
+      <p>This function takes three arguments:</p>
+      <ul>
+        <li>
+          <strong>variables</strong>: A list of logical variables (<code
+            >P</code
+          >
+          and <code>Q</code> in this case).
+        </li>
+        <li>
+          <strong>combination</strong>: A tuple representing one combination of
+          truth values for the variables (e.g., <code>(True, False)</code>).
+        </li>
+        <li>
+          <strong>expression</strong>: The logical expression input by the user
+          (e.g., <code>P and Q</code>).
+        </li>
+      </ul>
+
+      <h3>a. Context Creation</h3>
+      <pre><code>context = dict(zip(variables, combination))</code></pre>
+      <p>
+        The <code>context</code> dictionary maps variables to their
+        corresponding truth values. For example, if the variables are
+        <code>["P", "Q"]</code> and the combination is
+        <code>(True, False)</code>, the <code>context</code> will be
+        <code>{"P": True, "Q": False}</code>.
+      </p>
+
+      <h3>b. Replacing Logical Operators</h3>
+      <pre><code>expression = expression.replace("and", " and ")
+expression = expression.replace("or", " or ")
+expression = expression.replace("not", " not ")
+</code></pre>
+      <p>
+        This ensures that logical operators (<code>and</code>,
+        <code>or</code>, and <code>not</code>) have proper spacing so they can
+        be evaluated later. If operators in the user's expression are not
+        properly spaced, this step ensures they are formatted correctly.
+      </p>
+
+      <h3>c. Substituting Variables</h3>
+      <pre><code>for var, val in context.items():
+    expression = expression.replace(var, str(val))
+</code></pre>
+      <p>
+        This loop replaces the variables (<code>P</code> and <code>Q</code>) in
+        the expression with their corresponding truth values from the
+        <code>context</code> dictionary. For example, if the expression is
+        <code>P and Q</code> and <code>context</code> is
+        <code>{"P": True, "Q": False}</code>, the expression becomes
+        <code>True and False</code>.
+      </p>
+
+      <h3>d. Manual Evaluation of Tokens</h3>
+      <pre><code>tokens = expression.split()</code></pre>
+      <p>
+        The expression is split into individual tokens (components) to be
+        evaluated manually. For example, the expression
+        <code>True and False</code> becomes
+        <code>['True', 'and', 'False']</code>.
+      </p>
+
+      <h3>e. Logical Evaluation Loop</h3>
+      <p>
+        The program iterates through each token to compute the final result
+        based on logical operations:
+      </p>
+      <ul>
+        <li>
+          The loop first evaluates <code>"not"</code> operations. If the token
+          is <code>"not"</code>, it applies the
+          <code>logical_not</code> function to the next token's truth value,
+          replacing the <code>not</code> token with the result and removing the
+          operand from the list.
+        </li>
+        <li>
+          After handling <code>not</code> operations, it checks for
+          <code>"and"</code>. If found, it retrieves the truth values of the
+          surrounding tokens, applies <code>logical_and</code>, and replaces the
+          left operand with the result while removing the <code>and</code> token
+          and the right operand.
+        </li>
+        <li>
+          Finally, the loop evaluates <code>"or"</code> operations in a similar
+          manner. It retrieves the truth values of the surrounding tokens,
+          applies <code>logical_or</code>, and updates the left operand with the
+          result, removing the <code>or</code> token and the right operand.
+        </li>
+        <li>
+          The last remaining token in the list represents the final truth value
+          of the expression, which is returned as the output of the evaluation.
+        </li>
+      </ul>
+
+      <h2>4. <strong>Generating the Truth Table</strong></h2>
+      <pre><code>def generate_truth_table():
+</code></pre>
+      <p>
+        This function generates and prints the truth table based on user input.
+      </p>
+
+      <h3>a. User Input via a txt.file</h3>
+      <pre><code>variables = ["P", "Q"]
+expression = sys.stdin.read().strip()
+</code></pre>
+      <p>
+        The user is prompted to enter a logical expression involving
+        <code>P</code> and <code>Q</code> in a file.
+      </p>
+
+      <h3>b. Generating All Combinations of Truth Values</h3>
+      <pre><code>combinations = list(itertools.product([True, False], repeat=len(variables)))
+</code></pre>
+      <p>
+        The
+        <code>itertools.product([True, False], repeat=2)</code> function
+        generates all possible combinations of truth values for
+        <code>P</code> and <code>Q</code>. Since there are two variables, it
+        generates four combinations:
+      </p>
+      <ul>
+        <li><code>(True, True)</code></li>
+        <li><code>(True, False)</code></li>
+        <li><code>(False, True)</code></li>
+        <li><code>(False, False)</code></li>
+      </ul>
+
+      <h3>c. Printing the Table Header</h3>
+      <pre><code>header = " | ".join(variables) + " | Result"
+print(header)
+print("-" * len(header))</code></pre>
+      <p>
+        The header of the truth table is printed, showing the variables
+        <code>P</code>, <code>Q</code>, and the result. A separator line is also
+        printed for formatting.
+      </p>
+
+      <h3>d. Evaluating and Printing Each Row</h3>
+      <pre><code>for combination in combinations:
+    result = evaluate_expression(variables, combination, expression)
+    row = " | ".join(map(str, combination)) + " | " + str(result)
+    print(row)
+</code></pre>
+      <p>
+        For each combination of truth values, the
+        <code>evaluate_expression()</code> function is called to compute the
+        result. The result is printed along with the corresponding truth values
+        for <code>P</code> and <code>Q</code>.
+      </p>
+
+      <h2>5. <strong>Running the Program</strong></h2>
+      <pre><code>generate_truth_table()</code></pre>
+      <p>
+        This line starts the program by calling the
+        <code>generate_truth_table()</code> function, which handles input,
+        computation, and output.
+      </p>
+
+      <h2>Example Output:</h2>
+      <p>
+        If the user enters the expression <code>P and Q or not P</code>, the
+        truth table might look like this:
+      </p>
+
+      <div class="example">
+        <pre><code>P | Q | Result
+----------------
+True | True | True
+True | False | True
+False | True | True
+False | False | False
+</code></pre>
+      </div>
+
+      <p>
+        - When <code>P</code> is <code>True</code> and <code>Q</code> is
+        <code>True</code>, the result is <code>True and True or not True</code>,
+        which evaluates to <code>True</code>.
+      </p>
+      <p>
+        - When <code>P</code> is <code>False</code> and <code>Q</code> is
+        <code>False</code>, the result is
+        <code>False and False or not False</code>, which evaluates to
+        <code>False</code>.
+      </p>
+      <h2>❗Error Handling</h2>
+
+      <h2><code>validate_expression</code> function</h2>
+
+      <h3>Description</h3>
+      <p>
+        The <code>validate_expression</code> function validates a logical
+        expression by ensuring it contains only the allowed variables and
+        operators, as well as checking for proper syntax. This function verifies
+        that the expression begins and ends correctly and maintains a valid
+        structure throughout.
+      </p>
+
+      <h3>Function Signature</h3>
+      <pre><code>def validate_expression(expression: str) -> bool:</code></pre>
+
+      <h3>Parameters</h3>
+      <ul>
+        <li>
+          <strong>expression</strong> (str): A string representing the logical
+          expression to be validated. This expression can include the variables
+          <code>P</code> and <code>Q</code>, the logical operators
+          <code>and</code>, <code>or</code>, <code>not</code>, and the boolean
+          values <code>True</code> and <code>False</code>.
+        </li>
+      </ul>
+
+      <h3>Returns</h3>
+      <ul>
+        <li>
+          <strong>bool</strong>: Returns <code>True</code> if the expression is
+          valid (i.e., it contains only the allowed variables and operators),
+          and <code>False</code> if it is invalid.
+        </li>
+      </ul>
+
+      <h3>Valid Inputs</h3>
+      <p>The following inputs are considered valid:</p>
+      <ul>
+        <li>
+          Variables:
+          <ul>
+            <li><code>P</code></li>
+            <li><code>Q</code></li>
+          </ul>
+        </li>
+        <li>
+          Logical Operators:
+          <ul>
+            <li><code>and</code></li>
+            <li><code>or</code></li>
+            <li><code>not</code></li>
+          </ul>
+        </li>
+        <li>
+          Boolean Values:
+          <ul>
+            <li><code>True</code></li>
+            <li><code>False</code></li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>Invalid Inputs</h3>
+      <p>
+        The function will return <code>False</code> for any of the following
+        scenarios:
+      </p>
+      <ul>
+        <li>
+          The expression contains unsupported variable names (e.g.,
+          <code>R</code>, <code>S</code>).
+        </li>
+        <li>
+          The expression includes unsupported logical operators (e.g.,
+          <code>&</code>, <code>|</code>).
+        </li>
+        <li>
+          The expression has improperly formatted components (e.g., missing
+          spaces between tokens).
+        </li>
+        <li>The expression is empty or contains only whitespace.</li>
+        <li>
+          The expression starts with an operator instead of a variable or
+          <code>not</code>.
+        </li>
+        <li>An operator is placed immediately after another operator.</li>
+        <li>The expression ends with an operator.</li>
+      </ul>
+      <div class="repo">
+        <h1>
+          Check out the code
+          <a href="https://github.com/yahalloe/truthtable" target="_blank"
+            >here</a
+          >.
+        </h1>
+      </div>
+        <img src="output.png" alt="output">
+    </div>
+  </body>
+  <footer>
+    © 2024 <a href="https://yahallo.me" target="_blank">yahallo.me</a> |
+    <a href="https://github.com/yahalloe/truthtable" target="_blank">repo</a>
+  </footer>
+</html>

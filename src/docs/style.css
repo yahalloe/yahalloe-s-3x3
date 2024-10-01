@@ -1,0 +1,156 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #d7d7d7;
+  background-color: #222;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+}
+
+.container {
+  width: 60%;
+  color: #d7d7d7;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: #111;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #d7d7d7;
+  text-align: center;
+  /* margin-bottom: 2em; */
+}
+
+h2 {
+  margin-top: 1.5em;
+  color: #d7d7d7;
+}
+
+h3 {
+  margin-top: 1.5em;
+}
+
+ul {
+  margin: 10px 0;
+}
+
+li {
+  margin: 5px 0;
+}
+
+a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent element */
+  position: relative; /* Position relative for the pseudo-element */
+}
+
+a::after {
+  content: ""; /* Create a pseudo-element */
+  position: absolute; /* Position it absolutely within the parent */
+  left: 0; /* Align to the left */
+  bottom: 0; /* Position it at the bottom */
+  width: 100%; /* Full width */
+  height: 2px; /* Underline height */
+  background-color: #76c7c0; /* Underline color */
+  transform: scaleX(0); /* Start with no width */
+  transition: transform 0.3s ease; /* Transition for the scaling effect */
+}
+
+a:hover::after {
+  transform: scaleX(1); /* Scale to full width on hover */
+}
+
+code {
+  background-color: #3a3a3a; /* Darker background for code elements */
+  color: #76c7c0; /* Light turquoise text color for code */
+  padding: 2px 4px; /* Padding around the code text */
+  border-radius: 4px; /* Rounded corners for a softer look */
+  font-family: "JetBrains Mono", monospace; /* Monospace font for code */
+  font-size: 90%; /* Slightly smaller font size than surrounding text */
+}
+
+pre {
+  background: #3a3a3a; /* Dark background for code blocks */
+  color: #76c7c0; /* Light turquoise text color for code */
+  padding: 10px;
+  border-left: 5px solid #d7d7d7; /* Optional: keep this for visual separation */
+  overflow-x: auto;
+}
+
+.repo {
+  margin-top: 4em;
+}
+
+img {
+  max-width: 100%; /* Makes the image responsive */
+  height: auto; /* Maintains the aspect ratio */
+  display: block; /* Ensures no extra space below the image */
+}
+
+footer {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #777;
+  background-color: #111;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 1.5em; /* Heading 1 size */
+  }
+
+  h2 {
+    font-size: 1.25em; /* Heading 2 size, slightly larger */
+  }
+
+  h3 {
+    font-size: 1.1em; /* Heading 3 size, slightly larger */
+  }
+
+  p {
+    font-size: 1.1em;
+  }
+
+  ul {
+    line-height: 1.9em; /* Adjust as needed */
+    list-style-type: none;
+    padding-left: 0.4em; /* Remove left padding */
+    font-size: 1em;
+  }
+
+  ul li {
+    padding: 0.5;
+    margin: 0.1em 0; /* Maintain vertical spacing */
+    font-size: 1em;
+  }
+
+  img {
+    max-width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Ensures no extra space below the image */
+    max-width: 100%; /* Prevents it from exceeding the container */
+  }
+}
